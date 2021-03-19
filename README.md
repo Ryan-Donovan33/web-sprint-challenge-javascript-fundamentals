@@ -49,7 +49,7 @@ New Binding - creates a new object in references to the function we are using.
 
 5. Why do we need super() in an extended class?
 
-It binds all the 'atttributes' from the parent/grandparent to the child without using .call. 
+It binds all the 'atttributes' from the parent/grandparent to the child without using .call.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
