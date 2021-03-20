@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// nestedFunction is able to access the variable internal because they are both within the same 'scope' or within the same closure. IT's all inside myFunction allowing nested access. 
 
 
 
@@ -28,8 +28,11 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
+function summation(number) {
   /*Your Code Here*/
+   for (let i = 0; i <= number; i++) {
+     console.log(i)
+   }
 
   }
  
@@ -56,8 +59,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(arr){
     /*Your Code Here*/
+    const displayNames = arr.forEach((data, i) => {
+      return `name: ${data[i].animal_name}, scientific: ${data[i].scientific_name}`
+    })
+    return displayNames;
   }
   
 
@@ -66,20 +73,32 @@ const zooAnimals = [
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
-
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(arr){
     /*Your Code Here*/
+    const lowerCaseAn = arr.map((data) => {
+      return data.animal_name.toLowerCase();
+    })
+
+    return lowerCaseAn
   }
-  
-  
+console.log(lowerCaseNames(zooAnimals));
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(arr){
     /*Your Code Here*/
+    const lowPop = arr.filter((data) => {
+      if ( data.population < 5 ) {
+        return data;
+      }
+    })
+    return lowPop;
   }
+
+  lowPopulationAnimals(zooAnimals);
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
