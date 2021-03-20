@@ -30,11 +30,14 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(number) {
   /*Your Code Here*/
-   for (let i = 0; i <= number; i++) {
-     console.log(i)
+  let sum = 0
+  for (let i = 1; i <= number; i++) {
+     sum = (i+i)
    }
-
+    return sum
   }
+
+  summation(4);
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -81,7 +84,7 @@ const zooAnimals = [
 
     return lowerCaseAn
   }
-// lowerCaseNames(zooAnimals);
+lowerCaseNames(zooAnimals);
 
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
